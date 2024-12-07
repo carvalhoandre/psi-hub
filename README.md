@@ -1,1 +1,2 @@
-# psi-hub
+## PSI HUB
+Projeto pessoal em desenvolvimento.
