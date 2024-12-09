@@ -22,7 +22,7 @@ export default function RootLayout({
 
 	return (
 		<html className={rootClassNames} lang='pt-BR'>
-			<body>{children}</body>
+			<body className='page'>{children}</body>
 		</html>
 	);
 }

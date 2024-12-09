@@ -45,7 +45,7 @@ button:disabled {
 }
 
 .page {
-	font-family: var(--body-font);
+	font-family: var(--font-primary-poppins);
 	font-size: var(--normal-font-size);
 	background-color: var(--body-color);
 	color: var(--text-color);

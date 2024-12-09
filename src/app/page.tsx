@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 
+import { About } from 'components/Home/About';
+
 const AppUrl = process.env.NEXT_PUBLIC_APP_URL;
 
 const title = 'Giovanna Dias';
@@ -52,7 +54,11 @@ export const metadata: Metadata = {
 };
 
 const Home: Page<'Home'> = () => {
-	return <></>;
+	return (
+		<>
+			<About />
+		</>
+	);
 };
 
 export default Home;
