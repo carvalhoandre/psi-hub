@@ -34,6 +34,9 @@ export default {
 				border: '#e0e0e0',
 			},
 		},
+		boxShadow: {
+			'inset-white': 'inset 0 -60px var(--color-white)',
+		},
 	},
 	plugins: [],
 } satisfies Config;

@@ -7,8 +7,8 @@ import ArrowUp from '../../../public/images/icons/arrow-up.svg';
 
 const Footer: Component = () => {
 	return (
-		<footer className='bg-background text-text-dark px-5 py-10'>
-			<div className='container mx-auto flex flex-col md:flex-row justify-between gap-10 mb-10'>
+		<footer className='text-text-dark px-5 py-10'>
+			<div className='container mx-auto flex flex-col md:flex-row justify-between gap-10 mb-10  md:shadow-inset-white'>
 				<div>
 					{footerInfo.map((info, index) => (
 						<div key={index} className='flex items-start gap-4 mb-6'>

@@ -6,18 +6,19 @@ import Title from 'components/Title';
 
 const About: React.FC = () => {
 	return (
-		<main
+		<section
 			id='about'
-			className='relative bg-background shadow-[inset_0_-120px_var(--color-white)] md:shadow-[inset_0_-60px_var(--color-white)]'
+			className='relative bg-background shadow-[inset_0_-120px_var(--color-white)]'
 			style={{
 				backgroundImage: "url('../../../../public/images/dec/bottom-left.svg')",
 				backgroundPosition: 'bottom 160px left 20px',
 				backgroundRepeat: 'no-repeat',
 			}}
 		>
-			<div className='container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 px-5 py-20 sm:py-10'>
+			<div className='container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-5 py-20'>
 				<div className='self-end pb-20 md:pb-0'>
 					<Title text='Sou a Giovanna Dias' />
+
 					<h2 className='text-2xl font-medium text-text-dark mb-4'>
 						Psicóloga formada pela Universidade Paulista UNIP
 					</h2>
@@ -28,6 +29,7 @@ const About: React.FC = () => {
 						papel é te acompanhar nesse processo, oferecendo escuta, acolhimento
 						e compreensão.
 					</p>
+
 					<a
 						href='#contact'
 						className='inline-block px-8 py-4 bg-gradient-to-b from-primary to-secondary text-white rounded-md shadow-md uppercase font-semibold hover:from-secondary hover:to-primary'
@@ -42,15 +44,18 @@ const About: React.FC = () => {
 							media='(max-width: 800px)'
 							srcSet='../../../../public/images/small_profile_image.webp'
 						/>
+
 						<OptimizedImage
 							src={PorfileImage}
 							alt='Giovanna Dias'
+							width={500}
+							height={500}
 							className='w-full h-auto object-cover rounded-lg'
 						/>
 					</picture>
 				</div>
 			</div>
-		</main>
+		</section>
 	);
 };
 
