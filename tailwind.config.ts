@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 export default {
 	corePlugins: {
@@ -6,6 +7,15 @@ export default {
 	},
 	content: ['./src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
+		fontSize: {
+			big: '2em',
+			h1: '1.5em',
+			h2: '1.25em',
+			h3: '1.125em',
+			normal: '0.938em',
+			small: '0.813em',
+			smaller: '0.75em',
+		},
 		extend: {
 			colors: {
 				primary: 'var(--color-primary)',
