@@ -7,10 +7,3 @@ export const fontPrimary = Poppins({
 	variable: '--font-primary-poppins',
 	display: 'swap',
 });
-
-export const fontSecondary = Calligraffitti({
-	weight: '400',
-	subsets: ['latin'],
-	variable: '--font-secondary-calligraffitti',
-	display: 'swap',
-});
