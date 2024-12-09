@@ -1,4 +1,9 @@
 import type { Metadata } from 'next';
+
+import classNames from 'classnames';
+
+import { fontPlayfair, fontPoppins, fontRoboto } from 'core/assets/font';
+
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -11,8 +16,14 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const rootClassNames = classNames(
+		fontPlayfair.variable,
+		fontPoppins.variable,
+		fontRoboto.variable
+	);
+
 	return (
-		<html lang='pt-BR'>
+		<html lang='pt-BR' className={rootClassNames}>
 			<body>{children}</body>
 		</html>
 	);
