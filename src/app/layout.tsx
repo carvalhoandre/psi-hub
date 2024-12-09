@@ -1,4 +1,8 @@
 import type { Metadata } from 'next';
+import classNames from 'classnames';
+
+import { fontPrimary, fontSecondary } from 'core/assets/font';
+
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -11,8 +15,13 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const rootClassNames = classNames(
+		fontPrimary.variable,
+		fontSecondary.variable
+	);
+
 	return (
-		<html lang='pt-BR'>
+		<html className={rootClassNames} lang='pt-BR'>
 			<body>{children}</body>
 		</html>
 	);

@@ -1,3 +1,82 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	outline: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--title-color);
+	font-weight: var(--font-semi-bold);
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+button {
+	border: none;
+}
+
+button:disabled {
+	opacity: 0.5;
+	cursor: auto;
+}
+
+.page {
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+	background-color: var(--body-color);
+	color: var(--text-color);
+}
+
+.container {
+	box-sizing: border-box;
+	max-width: 1200px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.link {
+	display: inline-block;
+	font: 500 1.25rem/1.5 var(--font-primary-poppins), Arial, Helvetica,
+		sans-serif;
+	text-transform: uppercase;
+}
+
+.link::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: currentColor;
+}
+
+/* selection */
+*::selection {
+	background-color: #366374;
+	color: var(--color-white);
+}
