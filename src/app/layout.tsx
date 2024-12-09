@@ -3,6 +3,8 @@ import classNames from 'classnames';
 
 import { fontPrimary } from 'core/assets/font';
 
+import Footer from 'components/Footer';
+
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -19,7 +21,11 @@ export default function RootLayout({
 
 	return (
 		<html className={rootClassNames} lang='pt-BR'>
-			<body className='page'>{children}</body>
+			<body className='page'>
+				{children}
+
+				<Footer />
+			</body>
 		</html>
 	);
 }

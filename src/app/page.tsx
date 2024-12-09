@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 
 import { About } from 'components/Home/About';
-import Footer from 'components/Footer';
 
 const AppUrl = process.env.NEXT_PUBLIC_APP_URL;
 
@@ -58,8 +57,6 @@ const Home: Page<'Home'> = () => {
 	return (
 		<>
 			<About />
-
-			<Footer />
 		</>
 	);
 };
