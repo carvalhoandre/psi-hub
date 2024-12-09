@@ -1,36 +1,9 @@
 import OptimizedImage from 'components/OptimizedImage';
 import React from 'react';
 
-import Map from '../../../public/images/icons/map-marker.svg';
-import Envelope from '../../../public/images/icons/envelope.svg';
-import Phone from '../../../public/images/icons/phone.svg';
+import { footerInfo, navLinks } from 'components/Footer/constant';
+
 import ArrowUp from '../../../public/images/icons/arrow-up.svg';
-
-const footerInfo = [
-	{
-		src: Map,
-		title: 'Atendimentos Online',
-	},
-	{
-		src: Envelope,
-		title: 'Email',
-		subtitle: 'giovanna.diasss09@gmail.com',
-		link: 'mailto:giovanna.diasss09@gmail.com?Subject=Olá Giovanna',
-	},
-	{
-		src: Phone,
-		title: 'Telefone',
-		subtitle: '+55 (11) 94305-0454',
-		link: 'https://api.whatsapp.com/send?phone=5511943050454&text=Ol%C3%A1!',
-	},
-];
-
-const navLinks = [
-	{ href: '#about', label: 'Sobre Mim' },
-	{ href: '#approaches', label: 'Abordagens' },
-	{ href: '#testimonials', label: 'Depoimentos' },
-	{ href: '#contact', label: 'Contato' },
-];
 
 const Footer: Component = () => {
 	return (
@@ -89,6 +62,7 @@ const Footer: Component = () => {
 					</ul>
 				</nav>
 			</div>
+
 			<div className='border-t border-border pt-5 text-center'>
 				<p className='text-sm mb-2'>CRP 06/200951</p>
 				<p className='text-sm text-text-dark'>
