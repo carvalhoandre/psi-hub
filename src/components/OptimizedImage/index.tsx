@@ -8,7 +8,6 @@ import { OptimizedImageData } from 'components/OptimizedImage/types';
 const OptimizedImage: Component<OptimizedImageData> = ({
 	src,
 	alt,
-	className = '',
 	testId = 'image',
 	width,
 	height,

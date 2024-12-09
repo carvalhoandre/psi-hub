@@ -5,6 +5,5 @@ export type OptimizedImageData = {
 	alt: string;
 	width: number;
 	height: number;
-	className?: string;
 	placeholderSrc?: string;
 };
