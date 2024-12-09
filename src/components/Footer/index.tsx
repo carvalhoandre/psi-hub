@@ -43,6 +43,8 @@ const Footer: Component = () => {
 								src={info.src}
 								className='text-primary text-2xl'
 								alt={info.title}
+								width={36}
+								height={36}
 							/>
 
 							<div>
@@ -76,14 +78,10 @@ const Footer: Component = () => {
 						))}
 
 						<li>
-							<a
-								href='#header'
-								aria-label='Navegar para o topo'
-								className='text-primary text-2xl hover:scale-110 transition-transform'
-							>
+							<a href='#header' aria-label='Navegar para o topo'>
 								<OptimizedImage
 									src={ArrowUp}
-									className='text-primary text-2xl'
+									className='text-primary text-2xl text-primary text-2xl hover:scale-110 transition-transform'
 									alt='Ícone de seta para cima'
 								/>
 							</a>

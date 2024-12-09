@@ -9,6 +9,8 @@ const OptimizedImage: Component<OptimizedImageData> = ({
 	src,
 	alt,
 	testId = 'image',
+	width,
+	height,
 	placeholderSrc = '/placeholder.png',
 	className,
 }) => {
@@ -19,7 +21,7 @@ const OptimizedImage: Component<OptimizedImageData> = ({
 	};
 
 	return (
-		<div data-testid={testId}>
+		<div data-testid={testId} style={{ width, height }}>
 			{!isLoaded && (
 				<div className='absolute inset-0 bg-gray-200 animate-pulse'></div>
 			)}
@@ -27,6 +29,8 @@ const OptimizedImage: Component<OptimizedImageData> = ({
 			<Image
 				src={src}
 				alt={alt}
+				width={width}
+				height={height}
 				className={`${className} transition-opacity duration-200 ${
 					isLoaded ? 'opacity-100' : 'opacity-0'
 				}`}
