@@ -41,6 +41,7 @@ export default {
 		boxShadow: {
 			'inset-white': 'inset 0 -120px #fff',
 			'inset-white-small': 'inset 0 -60px #fff',
+			'outset-white': 'inset 0 80px #fff, inset 0 -80px #fff',
 		},
 	},
 	plugins: [],

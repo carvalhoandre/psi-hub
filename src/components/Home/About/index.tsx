@@ -4,7 +4,7 @@ import PorfileImage from '../../../../public/images/IMG_1153-rede-social.webp';
 import OptimizedImage from 'components/OptimizedImage';
 import Title from 'components/Title';
 
-const About: React.FC = () => {
+const About: Component = () => {
 	return (
 		<main
 			id='about'
@@ -42,25 +42,23 @@ const About: React.FC = () => {
 					<Title text='Sou a Giovanna Dias' />
 
 					<h2
-						className="
+						className='
               text-h1 
               font-medium 
               text-text-dark 
-              mb-4 
-              [data-anime='200']:transition-opacity
-            "
+              mb-4
+            '
 					>
 						Psicóloga formada pela Universidade Paulista UNIP
 					</h2>
 
 					<p
-						className="
+						className='
               text-base 
               leading-[1.6] 
               text-text-dark 
-              mb-[30px] 
-              [data-anime='300']:transition-opacity
-            "
+              mb-[30px]
+            '
 					>
 						Minha missão é ajudar as pessoas a ressignificarem suas experiências
 						e a encontrarem um novo sentido para suas vidas. Acredito que cada
