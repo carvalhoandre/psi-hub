@@ -78,5 +78,5 @@ button:disabled {
 /* selection */
 *::selection {
 	background-color: #366374;
-	color: var(--color-white);
+	color: #fff;
 }
