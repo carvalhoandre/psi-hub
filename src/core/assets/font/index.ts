@@ -1,9 +1,21 @@
-import { Poppins } from 'next/font/google';
-import { Calligraffitti } from 'next/font/google';
+import { Poppins, Playfair_Display, Roboto } from 'next/font/google';
 
-export const fontPrimary = Poppins({
-	weight: ['600', '500', '400'],
+export const fontPoppins = Poppins({
+	weight: ['400', '500', '600'],
 	subsets: ['latin'],
-	variable: '--font-primary-poppins',
+	variable: '--font-poppins',
+	display: 'swap',
+});
+
+export const fontPlayfair = Playfair_Display({
+	subsets: ['latin'],
+	variable: '--font-playfair',
+	display: 'swap',
+});
+
+export const fontRoboto = Roboto({
+	weight: ['400'],
+	subsets: ['latin'],
+	variable: '--font-roboto',
 	display: 'swap',
 });

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+
 import classNames from 'classnames';
 
-import { fontPrimary } from 'core/assets/font';
+import { fontPlayfair, fontPoppins, fontRoboto } from 'core/assets/font';
 
 import Footer from 'components/Footer';
 
@@ -17,15 +18,17 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const rootClassNames = classNames(fontPrimary.variable);
+	const rootClassNames = classNames(
+		fontPlayfair.variable,
+		fontPoppins.variable,
+		fontRoboto.variable
+	);
 
 	return (
-		<html className={rootClassNames} lang='pt-BR'>
-			<body className='page'>
-				{children}
+		<html lang='pt-BR' className={rootClassNames}>
+			<body>{children}</body>
 
-				<Footer />
-			</body>
+			<Footer />
 		</html>
 	);
 }
