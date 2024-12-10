@@ -36,6 +36,7 @@ export default {
 		},
 		boxShadow: {
 			'inset-white': 'inset 0 -60px var(--color-white)',
+			'inset-card': '0 4px 6px #0000001a',
 		},
 	},
 	plugins: [],
