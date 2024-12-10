@@ -4,6 +4,8 @@ import classNames from 'classnames';
 
 import { fontPlayfair, fontPoppins, fontRoboto } from 'core/assets/font';
 
+import Footer from 'components/Footer';
+
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -25,6 +27,8 @@ export default function RootLayout({
 	return (
 		<html lang='pt-BR' className={rootClassNames}>
 			<body>{children}</body>
+
+			<Footer />
 		</html>
 	);
 }

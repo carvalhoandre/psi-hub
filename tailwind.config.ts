@@ -44,6 +44,9 @@ export default {
 				h3: 'var(--h3-font-size)',
 			},
 		},
+		boxShadow: {
+			'inset-white': 'inset 0 -60px var(--color-white)',
+		},
 	},
 	plugins: [],
 } satisfies Config;
