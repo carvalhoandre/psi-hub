@@ -26,6 +26,7 @@ export default {
 		extend: {
 			colors: {
 				primary: '#93cce0',
+				'primary-dark': '#84b7c9',
 				secondary: '#d3cce3',
 				'text-dark': '#333',
 				white: '#fff',
@@ -33,9 +34,13 @@ export default {
 				background: '#f2f0ed',
 				border: '#e0e0e0',
 			},
+			screens: {
+				'max-800': { max: '800px' },
+			},
 		},
 		boxShadow: {
-			'inset-white': 'inset 0 -60px var(--color-white)',
+			'inset-white': 'inset 0 -120px #fff',
+			'inset-white-small': 'inset 0 -60px #fff',
 		},
 	},
 	plugins: [],
