@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import classNames from 'classnames';
+
 import Image from 'next/image';
 
 import { OptimizedImageData } from 'components/OptimizedImage/types';
@@ -12,6 +14,7 @@ const OptimizedImage: Component<OptimizedImageData> = ({
 	width,
 	height,
 	placeholderSrc = '/placeholder.png',
+	className,
 }) => {
 	const [isLoaded, setIsLoaded] = useState(false);
 
@@ -20,7 +23,7 @@ const OptimizedImage: Component<OptimizedImageData> = ({
 	};
 
 	return (
-		<div data-testid={testId} style={{ width, height }}>
+		<div data-testid={testId} style={{ width, height }} className='relative'>
 			{!isLoaded && (
 				<div className='absolute inset-0 bg-gray-200 animate-pulse'></div>
 			)}
@@ -30,9 +33,10 @@ const OptimizedImage: Component<OptimizedImageData> = ({
 				alt={alt}
 				width={width}
 				height={height}
-				className={`transition-opacity duration-200 ${
-					isLoaded ? 'opacity-100' : 'opacity-0'
-				}`}
+				className={classNames(className, 'transition-opacity duration-200', {
+					'opacity-100': isLoaded,
+					'opacity-0': !isLoaded,
+				})}
 				onLoadingComplete={handleLoad}
 				placeholder='blur'
 				blurDataURL={placeholderSrc}

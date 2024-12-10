@@ -6,7 +6,7 @@ import Title from 'components/Title';
 
 const About: React.FC = () => {
 	return (
-		<main
+		<section
 			id='about'
 			className='relative bg-background shadow-[inset_0_-120px_var(--color-white)]'
 			style={{
@@ -44,6 +44,7 @@ const About: React.FC = () => {
 							media='(max-width: 800px)'
 							srcSet='../../../../public/images/small_profile_image.webp'
 						/>
+
 						<OptimizedImage
 							src={PorfileImage}
 							alt='Giovanna Dias'
@@ -54,7 +55,7 @@ const About: React.FC = () => {
 					</picture>
 				</div>
 			</div>
-		</main>
+		</section>
 	);
 };
 
