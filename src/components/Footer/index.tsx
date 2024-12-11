@@ -1,5 +1,6 @@
-import OptimizedImage from 'components/OptimizedImage';
 import React from 'react';
+
+import OptimizedImage from 'components/OptimizedImage';
 
 import { footerInfo, navLinks } from 'components/Footer/constant';
 
