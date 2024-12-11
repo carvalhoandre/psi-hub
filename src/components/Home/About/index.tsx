@@ -74,7 +74,7 @@ const About: Component = () => {
 						p-4 
 						px-8 
 						bg-gradient-to-b 
-						from-primary 
+						from-primary-main
 						to-primary-dark 
 						rounded 
 						shadow 
@@ -85,7 +85,7 @@ const About: Component = () => {
 						font-body 
 						cursor-pointer 
 						hover:from-primary-dark 
-						hover:to-primary
+						hover:to-primary-main
 					'
 					>
 						Marcar Consulta

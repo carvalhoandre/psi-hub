@@ -14,7 +14,7 @@ export default {
 			colors: {
 				primary: {
 					main: 'var(--color-primary)',
-					dark: 'var(--color-primary-dark',
+					dark: 'var(--color-primary-dark)',
 				},
 				secondary: 'var(--color-secondary)',
 				highlight: 'var(--color-highlight)',

@@ -11,7 +11,7 @@ const Link: Component<Types.LinkProps> = ({
 }) => {
 	const linkClassNames = classNames(
 		'cursor-pointer decoration-none text-text-dark font-roboto transition-colors duration-300',
-		'hover:text-primary focus:text-primary active:text-primary',
+		'hover:text-primary-main focus:text-primary-main active:text-primary-main',
 		className
 	);
 

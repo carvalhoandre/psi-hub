@@ -14,6 +14,7 @@
 	--color-border: #e0e0e0;
 
 	/* font and typography */
+	--body-font: 'Poppins', sans-serif;
 	--big-font-size: 2em;
 	--h1-font-size: 1.5em;
 	--h2-font-size: 1.25em;

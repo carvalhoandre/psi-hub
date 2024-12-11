@@ -27,7 +27,7 @@ export default function RootLayout({
 
 	return (
 		<html lang='pt-BR' className={rootClassNames}>
-			<body>
+			<body className='page'>
 				<Header />
 
 				{children}
