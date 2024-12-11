@@ -1,18 +1,34 @@
-import Logo from '../../assets/logo.svg';
-import Nav from '../Nav';
+import classNames from 'classnames';
 
-// import './styles.css';
+import Nav from 'components/Nav';
+import OptimizedImage from 'components/OptimizedImage';
 
 const Header: Component = () => {
+	const containerClassNames = classNames(
+		'container flex justify-between items-center px-4 py-2'
+	);
+
 	return (
-		<header className='header' id='header'>
-			<div className='container header-subcontainer'>
-				<div className='header-profile'>
-					{/* <Image src={Logo} alt='Giovanna Dias logo' className='logo' /> */}
+		<header className='bg-background sm:flex-wrap'>
+			<div className={containerClassNames}>
+				<div className='flex items-center'>
+					<OptimizedImage
+						alt='Logo com as iniciais G e D, representando o nome Giovanna Dias'
+						src='/images/logo.svg'
+						height={48}
+						width={48}
+						priority
+						className='w-12 h-12'
+					/>
 
 					<div>
-						<h1 className='profile-name'>Giovanna Dias</h1>
-						<p className='profile-crp'>Psicóloga - CRP 06/200951</p>
+						<h1 className='font-playfair text-h1 m-0 ml-4 text-text-dark'>
+							Giovanna Dias
+						</h1>
+
+						<p className='font-roboto text-base m-o ml-4 text-text-dark'>
+							Psicóloga - CRP 06/200951
+						</p>
 					</div>
 				</div>
 
@@ -22,4 +38,4 @@ const Header: Component = () => {
 	);
 };
 
-export { Header };
+export default Header;
