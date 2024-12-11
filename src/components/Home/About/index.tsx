@@ -12,8 +12,8 @@ const About: Component = () => {
 	  		relative 
         bg-background 
         shadow-inset-white 
-        max-800:shadow-inset-white-small 
-        max-800:pt-10
+        max-sm:shadow-inset-white-small 
+        max-sm:pt-10
 		'
 			style={{
 				backgroundImage: "url('../../../../public/images/dec/bottom-left.svg')",
@@ -27,16 +27,16 @@ const About: Component = () => {
           grid 
           grid-cols-2 
           gap-10
-          max-800:grid-cols-1
-          max-800:gap-8
-					max-800:py-10
+          max-sm:grid-cols-1
+          max-sm:gap-8
+					max-sm:py-10
         '
 			>
 				<div
 					className='
           	self-end 
           	pb-[200px] 
-          	max-800:pb-0
+          	max-sm:pb-0
           '
 				>
 					<Title text='Sou a Giovanna Dias' />

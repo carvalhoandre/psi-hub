@@ -12,7 +12,7 @@ const Contact: Component = () => {
 			className='
 			bg-background 
 			shadow-outset-white 
-			max-800:shadow-inset-white-small 
+			max-sm:shadow-inset-white-small 
 			py-16
 		'
 			style={{
@@ -29,8 +29,8 @@ const Contact: Component = () => {
 				grid 
 				grid-cols-2 
 				gap-10
-				max-800:grid-cols-1 
-				max-800:gap-8
+				max-sm:grid-cols-1 
+				max-sm:gap-8
 			'
 			>
 				<div className='self-center'>

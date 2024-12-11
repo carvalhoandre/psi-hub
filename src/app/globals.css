@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--color-primary: #93cce0;
+	--color-primary-dark: #84b7c9;
+	--color-secondary: #d3cce3;
+	--color-highlight: #366374;
+	--color-text-dark: #333;
+	--color-white: #fff;
+	--color-text-light: #555;
+	--color-background: #f2f0ed;
+	--color-border: #e0e0e0;
+
+	/* font and typography */
+	--big-font-size: 2em;
+	--h1-font-size: 1.5em;
+	--h2-font-size: 1.25em;
+	--h3-font-size: 1.125em;
+	--normal-font-size: 0.938em;
+	--small-font-size: 0.813em;
+	--smaller-font-size: 0.75em;
+}
+
+/* base */
 * {
 	margin: 0px;
 	padding: 0px;
@@ -45,7 +67,7 @@ button:disabled {
 }
 
 .page {
-	font-family: var(--font-primary-poppins);
+	font-family: var(--body-font);
 	font-size: var(--normal-font-size);
 	background-color: var(--body-color);
 	color: var(--text-color);
@@ -62,8 +84,7 @@ button:disabled {
 
 .link {
 	display: inline-block;
-	font: 500 1.25rem/1.5 var(--font-primary-poppins), Arial, Helvetica,
-		sans-serif;
+	font: 500 1.25rem/1.5 'Poppins', Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 }
 
@@ -77,6 +98,6 @@ button:disabled {
 
 /* selection */
 *::selection {
-	background-color: #366374;
-	color: #fff;
+	background-color: var(--color-highlight);
+	color: var(--color-white);
 }
