@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 
 import { About } from 'components/Home/About';
 import Approaches from 'components/Home/Approaches';
+import Testimonials from 'components/Home/Testimonials';
 
 const AppUrl = process.env.NEXT_PUBLIC_APP_URL;
 
@@ -60,6 +61,7 @@ const Home: Page<'Home'> = () => {
 			<About />
 
 			<Approaches />
+			<Testimonials />
 		</>
 	);
 };
