@@ -12,7 +12,10 @@ export default {
 				'max-sm': { max: '640px' },
 			},
 			colors: {
-				primary: 'var(--color-primary)',
+				primary: {
+					main: 'var(--color-primary)',
+					dark: 'var(--color-primary-dark)',
+				},
 				secondary: 'var(--color-secondary)',
 				highlight: 'var(--color-highlight)',
 				white: 'var(--color-white)',
@@ -46,6 +49,8 @@ export default {
 				'mobile-button': '0 0 0 3px var(--color-secondary)',
 				'mobile-button-after': '0 8px currentColor, 0 -8px currentColor',
 				'inset-card': '0 4px 6px #0000001a',
+				'inset-white-small': 'inset 0 -60px #fff',
+				'outset-white': 'inset 0 80px #fff, inset 0 -80px #fff',
 			},
 		},
 		boxShadow: {},

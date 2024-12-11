@@ -15,7 +15,7 @@ const Footer: Component = () => {
 						<div key={index} className='flex items-start gap-4 mb-6'>
 							<OptimizedImage
 								src={info.src}
-								className='text-primary text-2xl'
+								className='text-primary-main text-2xl'
 								alt={info.title}
 								width={36}
 								height={36}
@@ -28,7 +28,7 @@ const Footer: Component = () => {
 										href={info.link}
 										target='_new'
 										rel='noopener noreferrer'
-										className='text-sm text-text-light hover:text-primary transition-colors'
+										className='text-sm text-text-light hover:text-primary-main transition-colors'
 									>
 										{info.subtitle}
 									</a>
@@ -44,7 +44,7 @@ const Footer: Component = () => {
 							<li key={index}>
 								<a
 									href={link.href}
-									className='text-base text-text-dark hover:text-primary transition-colors'
+									className='text-base text-text-dark hover:text-primary-main transition-colors'
 								>
 									{link.label}
 								</a>
@@ -55,7 +55,7 @@ const Footer: Component = () => {
 							<a href='#header' aria-label='Navegar para o topo'>
 								<OptimizedImage
 									src={ArrowUp}
-									className='text-primary text-2xl text-primary text-2xl hover:scale-110 transition-transform'
+									className='text-primary-main text-2xl text-primary-main text-2xl hover:scale-110 transition-transform'
 									alt='Ícone de seta para cima'
 								/>
 							</a>
