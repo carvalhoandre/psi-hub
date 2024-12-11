@@ -18,7 +18,7 @@ const MobileButton: Component<Types.MobileButtonProps> = ({
 		'focus:outline-none focus:bg-white focus:shadow-mobile-button',
 		isOpenMenu && 'outline-none bg-white shadow-mobile-button',
 		isOpenMenu &&
-			'after:rotate-90 after:h-1 after:shadow-mobile-button-active-after after:text-primary',
+			'after:rotate-90 after:h-1 after:shadow-mobile-button-active-after after:text-primary-main',
 		isOpenMenu ? 'after:w-[2px] ' : 'after:w-[1.2rem]'
 	);
 
