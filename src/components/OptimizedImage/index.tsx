@@ -15,6 +15,7 @@ const OptimizedImage: Component<OptimizedImageData> = ({
 	height,
 	placeholderSrc = '/placeholder.png',
 	className,
+	...props
 }) => {
 	const [isLoaded, setIsLoaded] = useState(false);
 
@@ -37,10 +38,10 @@ const OptimizedImage: Component<OptimizedImageData> = ({
 					'opacity-100': isLoaded,
 					'opacity-0': !isLoaded,
 				})}
-				onLoadingComplete={handleLoad}
+				onLoad={handleLoad}
 				placeholder='blur'
 				blurDataURL={placeholderSrc}
-				priority
+				{...props}
 			/>
 		</div>
 	);

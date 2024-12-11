@@ -7,16 +7,10 @@ export default {
 	},
 	content: ['./src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		fontSize: {
-			big: '2em',
-			h1: '1.5em',
-			h2: '1.25em',
-			h3: '1.125em',
-			normal: '0.938em',
-			small: '0.813em',
-			smaller: '0.75em',
-		},
 		extend: {
+			screens: {
+				'max-sm': { max: '640px' },
+			},
 			colors: {
 				primary: 'var(--color-primary)',
 				secondary: 'var(--color-secondary)',
@@ -43,9 +37,15 @@ export default {
 				h2: 'var(--h2-font-size)',
 				h3: 'var(--h3-font-size)',
 			},
-		},
-		boxShadow: {
-			'inset-white': 'inset 0 -60px var(--color-white)',
+			borderRadius: {
+				small: '0.2rem',
+			},
+			boxShadow: {
+				'inset-white': 'inset 0 -60px var(--color-white)',
+				'nav-mobile': '0 1px 2px rgba(0, 0, 0, 0.2)',
+				'mobile-button': '0 0 0 3px var(--color-secondary)',
+				'mobile-button-after': '0 8px currentColor, 0 -8px currentColor',
+			},
 		},
 	},
 	plugins: [],
