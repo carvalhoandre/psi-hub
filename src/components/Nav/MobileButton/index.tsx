@@ -3,11 +3,6 @@ import React from 'react';
 
 import classNames from 'classnames';
 
-import {
-	afterClassNames,
-	interactionStatesClassNames,
-} from 'core/utils/classNames';
-
 import * as Types from './types';
 
 const MobileButton: Component<Types.MobileButtonProps> = ({
