@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
+
 import classNames from 'classnames';
 
 import useMedia from 'hooks/useMedia';
-import MobileButton from './MobileButton';
-import Link from './Link';
+
 import { navLinks } from 'components/Footer/constant';
+
+import Link from './Link';
+import MobileButton from './MobileButton';
 
 const Nav: Component = () => {
 	const [isOpenMenu, setIsOpenMenu] = React.useState(false);
