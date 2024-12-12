@@ -73,7 +73,7 @@ const Contact: Component = () => {
 						Escolha uma das minhas redes
 					</p>
 
-					<div className='mt-4 flex gap-10'>
+					<div className='mt-4 flex gap-10 max-sm:mt-0 max-sm:flex max-sm:justify-center'>
 						<SocialsIcons />
 					</div>
 				</div>
@@ -82,7 +82,7 @@ const Contact: Component = () => {
 					<OptimizedImage
 						src={SocialImage}
 						alt='Giovanna Dias'
-						className='w-full h-full object-cover rounded'
+						className='w-full h-full object-cover rounded max-sm:hidden'
 					/>
 				</div>
 			</div>
@@ -90,4 +90,4 @@ const Contact: Component = () => {
 	);
 };
 
-export { Contact };
+export default Contact;

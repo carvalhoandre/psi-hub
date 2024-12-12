@@ -1,13 +1,14 @@
 import { Metadata } from 'next';
 
-import { About } from 'components/Home/About';
+import About from 'components/Home/About';
 import Approaches from 'components/Home/Approaches';
-import { Contact } from 'components/Home/Contact';
+import Contact from 'components/Home/Contact';
 import Testimonials from 'components/Home/Testimonials';
 
 const AppUrl = process.env.NEXT_PUBLIC_APP_URL;
 
 const title = 'Giovanna Dias';
+
 const description =
 	'Sou a psicóloga Giovanna Dias, apaixonada por ajudar pessoas a ressignificarem suas experiências e a encontrarem um novo sentido para suas vidas. Acredito que cada um de nós carrega um potencial de transformação incrível, e meu papel é te acompanhar nesse processo, oferecendo escuta, acolhimento e compreensão.';
 

@@ -12,6 +12,7 @@ const Link: Component<Types.LinkProps> = ({
 	const linkClassNames = classNames(
 		'cursor-pointer decoration-none text-text-dark font-roboto transition-colors duration-300',
 		'hover:text-primary-main focus:text-primary-main active:text-primary-main',
+		'max-sm:flex max-sm:items-center border-0 border-b border-solid border-[#EEE] p-2 font-roboto text-base',
 		className
 	);
 

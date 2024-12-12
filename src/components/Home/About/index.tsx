@@ -109,4 +109,4 @@ const About: Component = () => {
 	);
 };
 
-export { About };
+export default About;
