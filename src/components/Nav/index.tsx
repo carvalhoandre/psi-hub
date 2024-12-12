@@ -16,7 +16,7 @@ const Nav: Component = () => {
 		'flex gap-5',
 		'max-sm:block max-sm:absolute max-sm:top-[70px] max-sm:right-0 max-sm:py-0 max-sm:px-4 max-sm:bg-white max-sm:shadow-nav-mobile max-sm:rounded-small max-sm:translate-x-[-10px] max-sm:pointer-events-none',
 		isOpenMenu &&
-			'transition-all duration-300 z-50  translate-x-0 pointer-events-auto',
+			'transition-all duration-300 z-50  translate-x-0 pointer-events-auto max-sm:flex-col',
 		isOpenMenu ? 'opacity-100' : 'max-sm:opacity-0'
 	);
 

@@ -34,8 +34,8 @@ const Testimonials: Component = () => {
 						justify-center
 						pb-[10px] 
 						scroll-smooth
-						max-800:flex-col 
-						max-800:items-center
+						max-sm:flex-col 
+						max-sm:items-center
 					'
 			>
 				{testimonials.map((testimonial, index) => (

@@ -9,7 +9,7 @@ import ArrowUp from '../../../public/images/icons/arrow-up.svg';
 const Footer: Component = () => {
 	return (
 		<footer className='text-text-dark px-5 py-10'>
-			<div className='container mx-auto flex flex-col md:flex-row justify-between gap-10 mb-10  md:shadow-inset-white'>
+			<div className='container mx-auto flex flex-col items-center md:flex-row justify-between gap-10 mb-10  md:shadow-inset-white'>
 				<div>
 					{footerInfo.map((info, index) => (
 						<div key={index} className='flex items-start gap-4 mb-6'>
@@ -39,7 +39,7 @@ const Footer: Component = () => {
 				</div>
 
 				<nav>
-					<ul className='flex flex-col items-center gap-6'>
+					<ul className='flex max-sm:flex-col items-center gap-6'>
 						{navLinks.map((link, index) => (
 							<li key={index}>
 								<a
@@ -55,7 +55,7 @@ const Footer: Component = () => {
 							<a href='#header' aria-label='Navegar para o topo'>
 								<OptimizedImage
 									src={ArrowUp}
-									className='text-primary-main text-2xl text-primary-main text-2xl hover:scale-110 transition-transform'
+									className='text-primary-main text-2xl hover:scale-110 transition-transform'
 									alt='Ícone de seta para cima'
 								/>
 							</a>
@@ -64,7 +64,7 @@ const Footer: Component = () => {
 				</nav>
 			</div>
 
-			<div className='border-t border-border pt-5 text-center'>
+			<div className='border-0 border-t border-solid border-background pt-5 text-center'>
 				<p className='text-sm mb-2'>CRP 06/200951</p>
 				<p className='text-sm text-text-dark'>
 					&copy; 2024 Giovanna Dias. Todos os direitos reservados.

@@ -32,9 +32,9 @@ export const ApproachCard: Component<ApproachCardProps> = ({
           text-text-dark 
           relative 
           inline-block
-          font-sans
+          font-poppins
           before:content-[''] 
-          before:bg-primary 
+          before:bg-primary-main 
           before:inline-block 
           before:w-[12px] 
           before:h-[8px] 
@@ -48,7 +48,7 @@ export const ApproachCard: Component<ApproachCardProps> = ({
 			</h3>
 			<p
 				className='
-          font-sans 
+          font-roboto 
           text-base 
           leading-[1.5] 
           text-text-dark

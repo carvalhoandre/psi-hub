@@ -2,20 +2,12 @@ import { TestimonialCardProps } from 'components/Home/Testimonials/components/Te
 
 const TestimonialCard: Component<TestimonialCardProps> = ({ text, author }) => {
 	return (
-		<div
-			className='
-        bg-primary 
-        rounded-[10px] 
-        p-5 
-        min-w-[250px] 
-        shadow
-      '
-		>
+		<div className='bg-primary-main rounded-[10px] p-5 min-w-[250px] shadow-inset-card'>
 			<p
 				className="
           relative
-          text-base leading-[1.5] text-text-dark text-center mb-[10px] relative w-[290px]
-          font-sans
+          text-base leading-[1.5] text-text-dark text-center mb-[10px] w-[290px]
+          font-poppins
           before:content-['“']
           before:text-[2.5rem]
           before:absolute
