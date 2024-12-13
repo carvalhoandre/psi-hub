@@ -9,7 +9,7 @@ const Header: Component = () => {
 	);
 
 	return (
-		<header className='bg-background sm:flex-wrap'>
+		<header className='bg-background sm:flex-wrap' id='header'>
 			<div className={containerClassNames}>
 				<div className='flex items-center'>
 					<OptimizedImage
