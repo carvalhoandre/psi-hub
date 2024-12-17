@@ -1,5 +1,5 @@
 import React from 'react';
 
-export interface AuthLayoutProps {
+export type AuthLayoutProps = {
 	children: React.ReactNode;
-}
+};
