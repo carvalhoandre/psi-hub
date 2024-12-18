@@ -1,12 +1,25 @@
+'use client';
+
+import { useRouter } from 'next/navigation';
+
 import classNames from 'classnames';
+
+import useIsHome from 'hooks/useIsHome';
 
 import Nav from 'components/Nav';
 import OptimizedImage from 'components/OptimizedImage';
 
 const Header: Component = () => {
+	const isHome = useIsHome();
+	const router = useRouter();
+
 	const containerClassNames = classNames(
 		'container flex justify-between items-center px-4 py-2'
 	);
+
+	const handleLogoClick = () => {
+		router.push('/');
+	};
 
 	return (
 		<header className='bg-background sm:flex-wrap' id='header'>
@@ -18,7 +31,8 @@ const Header: Component = () => {
 						height={48}
 						width={48}
 						priority
-						className='w-12 h-12'
+						className='w-12 h-12 cursor-pointer'
+						onClick={handleLogoClick}
 					/>
 
 					<div>
@@ -32,7 +46,7 @@ const Header: Component = () => {
 					</div>
 				</div>
 
-				<Nav />
+				{isHome && <Nav />}
 			</div>
 		</header>
 	);

@@ -10,8 +10,8 @@ import Footer from 'components/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-	title: 'PSI HUB',
-	description: 'PSI HUB',
+	title: 'Giovanna Dias',
+	description: 'Giovanna Dias',
 };
 
 export default function RootLayout({
