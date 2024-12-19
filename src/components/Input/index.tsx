@@ -2,42 +2,15 @@ import React from 'react';
 
 import { InputProps } from './types';
 
-import InputBase from 'components/InputBase';
-import InputPassword from 'components/InputPassword';
+import InputBase from './Base';
+import InputPassword from './Password';
 
-const Input: Component<InputProps> = ({
-	type = 'text',
-	label,
-	id,
-	value,
-	placeholder = '',
-	required = false,
-	onChange,
-}) => {
+const Input: Component<InputProps> = ({ type = 'text', ...props }) => {
 	if (type === 'password') {
-		return (
-			<InputPassword
-				id={id}
-				value={value}
-				placeholder={placeholder}
-				required={required}
-				onChange={onChange}
-				label={label}
-			/>
-		);
+		return <InputPassword {...props} />;
 	}
 
-	return (
-		<InputBase
-			id={id}
-			value={value}
-			placeholder={placeholder}
-			required={required}
-			onChange={onChange}
-			type={type}
-			label={label}
-		/>
-	);
+	return <InputBase {...props} type={type} />;
 };
 
 export default Input;

@@ -6,16 +6,9 @@ import EyeIcon from '../../../public/images/icons/eye.svg';
 import EyeSlashIcon from '../../../public/images/icons/eye-slash.svg';
 
 import OptimizedImage from 'components/OptimizedImage';
-import InputBase from 'components/InputBase';
+import InputBase from 'components/Input/Base';
 
-const InputPassword: React.FC<React.HTMLProps<HTMLInputElement>> = ({
-	id,
-	value,
-	placeholder = '',
-	required = false,
-	label,
-	onChange,
-}) => {
+const InputPassword: React.FC<React.HTMLProps<HTMLInputElement>> = (props) => {
 	const [showPassword, setShowPassword] = React.useState(false);
 
 	const togglePasswordVisibility = () => {
@@ -24,15 +17,7 @@ const InputPassword: React.FC<React.HTMLProps<HTMLInputElement>> = ({
 
 	return (
 		<div className='mb-4 relative'>
-			<InputBase
-				id={id}
-				value={value}
-				placeholder={placeholder}
-				required={required}
-				onChange={onChange}
-				type={showPassword ? 'text' : 'password'}
-				label={label}
-			/>
+			<InputBase {...props} />
 
 			<button
 				type='button'

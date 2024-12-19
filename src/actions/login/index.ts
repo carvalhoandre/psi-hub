@@ -4,7 +4,6 @@ import { LoginResponse } from './types';
 
 const Login = async (_: any, formData: FormData): Promise<LoginResponse> => {
 	try {
-		console.log('chamou', formData);
 		const email = formData.get('email') as string | null;
 		const password = formData.get('password') as string | null;
 
