@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import Login from 'actions/login';
 
-import { Button, Title, Input } from 'components';
+import { Button, Title, Input, ErrorMessage } from 'components';
 
 const LoginPage: Component = () => {
 	const [state] = useFormState(Login, {
@@ -34,7 +34,8 @@ const LoginPage: Component = () => {
 
 				<Input id='password' label='Senha' type='password' required />
 
-				{state.error && <p className='text-red-500 text-sm'>{state.error}</p>}
+				<ErrorMessage error={state.error} />
+
 				<Button label='Entrar' type='submit' />
 			</form>
 
