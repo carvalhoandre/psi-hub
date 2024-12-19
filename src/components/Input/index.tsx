@@ -1,13 +1,12 @@
 import React from 'react';
-
-import { InputProps } from './types';
+import { HTMLProps } from 'react';
 
 import OptimizedImage from 'components/OptimizedImage';
 
 import EyeIcon from '../../../public/images/icons/eye.svg';
 import EyeSlashIcon from '../../../public/images/icons/eye-slash.svg';
 
-const Input: Component<InputProps> = ({
+const Input: Component<HTMLProps<HTMLInputElement>> = ({
 	id,
 	label,
 	type = 'text',
@@ -38,6 +37,8 @@ const Input: Component<InputProps> = ({
 					placeholder={placeholder}
 					className='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm'
 					required={required}
+					aria-required={required ? 'true' : 'false'}
+					name={id}
 				/>
 
 				{isPasswordType && (
