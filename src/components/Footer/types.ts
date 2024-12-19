@@ -1,11 +1,11 @@
-export interface FooterInfo {
+export type FooterInfo = {
 	src: string;
 	title: string;
 	subtitle?: string;
 	link?: string;
-}
+};
 
-export interface NavLink {
+export type NavLink = {
 	href: string;
 	label: string;
-}
+};

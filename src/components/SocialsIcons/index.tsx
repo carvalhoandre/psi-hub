@@ -17,4 +17,4 @@ const SocialsIcons: Component = ({ testId = 'social-icon' }) => {
 	));
 };
 
-export { SocialsIcons };
+export default SocialsIcons;
