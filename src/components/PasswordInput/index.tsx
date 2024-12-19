@@ -1,6 +1,6 @@
-import React from 'react';
+'use client';
 
-import { PasswordInputProps } from './types';
+import React from 'react';
 
 import EyeIcon from '../../../public/images/icons/eye.svg';
 import EyeSlashIcon from '../../../public/images/icons/eye-slash.svg';
@@ -8,15 +8,19 @@ import EyeSlashIcon from '../../../public/images/icons/eye-slash.svg';
 import OptimizedImage from 'components/OptimizedImage';
 import InputBase from 'components/InputBase';
 
-const PasswordInput: React.FC<PasswordInputProps> = ({
+const PasswordInput: React.FC<React.HTMLProps<HTMLInputElement>> = ({
 	id,
 	value,
 	placeholder = '',
 	required = false,
 	onChange,
-	showPassword = false,
-	togglePasswordVisibility,
 }) => {
+	const [showPassword, setShowPassword] = React.useState(false);
+
+	const togglePasswordVisibility = () => {
+		setShowPassword((prevState) => !prevState);
+	};
+
 	return (
 		<div className='mb-4 relative'>
 			<InputBase
@@ -31,7 +35,7 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
 			<button
 				type='button'
 				onClick={togglePasswordVisibility}
-				className='absolute inset-y-0 right-3 flex bg-transparent cursor-pointer items-center text-gray-500 hover:text-gray-700 focus:outline-none'
+				className='absolute inset-y-0 right-3 top-[24px] flex bg-transparent cursor-pointer items-center text-gray-500 hover:text-gray-700 focus:outline-none'
 			>
 				<OptimizedImage
 					alt='password-icon'
