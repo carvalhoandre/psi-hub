@@ -8,6 +8,7 @@ const Button: Component<ButtonProps> = ({
 	variant = 'default',
 	type = 'button',
 	onClick,
+	...props
 }) => {
 	const buttonClass = classNames(
 		'w-full flex justify-center py-2 px-4 rounded-md shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2',
@@ -19,7 +20,7 @@ const Button: Component<ButtonProps> = ({
 		}
 	);
 	return (
-		<button onClick={onClick} type={type} className={buttonClass}>
+		<button onClick={onClick} type={type} className={buttonClass} {...props}>
 			{label}
 		</button>
 	);
