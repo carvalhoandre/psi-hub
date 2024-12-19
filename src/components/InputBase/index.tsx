@@ -4,6 +4,7 @@ import { HTMLProps } from 'react';
 const InputBase: Component<HTMLProps<HTMLInputElement>> = ({
 	id,
 	value,
+	label,
 	placeholder = '',
 	required = false,
 	onChange,
@@ -12,7 +13,7 @@ const InputBase: Component<HTMLProps<HTMLInputElement>> = ({
 	return (
 		<div className='mb-4'>
 			<label htmlFor={id} className='block text-sm font-medium text-gray-700'>
-				{id}
+				{label}
 			</label>
 			<div className='relative'>
 				<input

@@ -8,11 +8,12 @@ import EyeSlashIcon from '../../../public/images/icons/eye-slash.svg';
 import OptimizedImage from 'components/OptimizedImage';
 import InputBase from 'components/InputBase';
 
-const PasswordInput: React.FC<React.HTMLProps<HTMLInputElement>> = ({
+const InputPassword: React.FC<React.HTMLProps<HTMLInputElement>> = ({
 	id,
 	value,
 	placeholder = '',
 	required = false,
+	label,
 	onChange,
 }) => {
 	const [showPassword, setShowPassword] = React.useState(false);
@@ -30,6 +31,7 @@ const PasswordInput: React.FC<React.HTMLProps<HTMLInputElement>> = ({
 				required={required}
 				onChange={onChange}
 				type={showPassword ? 'text' : 'password'}
+				label={label}
 			/>
 
 			<button
@@ -46,4 +48,4 @@ const PasswordInput: React.FC<React.HTMLProps<HTMLInputElement>> = ({
 	);
 };
 
-export default PasswordInput;
+export default InputPassword;

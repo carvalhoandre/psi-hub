@@ -3,7 +3,7 @@ import React from 'react';
 import { InputProps } from './types';
 
 import InputBase from 'components/InputBase';
-import PasswordInput from 'components/PasswordInput';
+import InputPassword from 'components/InputPassword';
 
 const Input: Component<InputProps> = ({
 	type = 'text',
@@ -16,7 +16,7 @@ const Input: Component<InputProps> = ({
 }) => {
 	if (type === 'password') {
 		return (
-			<PasswordInput
+			<InputPassword
 				id={id}
 				value={value}
 				placeholder={placeholder}
