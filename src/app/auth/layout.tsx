@@ -12,7 +12,6 @@ const AuthLayout: Component<AuthLayoutProps> = ({ children }) => {
 				items-center 
 				justify-center
 				max-sm:relative 
-				max-sm:min-h-screen 
 				max-sm:bg-transparent 
 				max-sm:flex-none 
 				max-sm:items-start 
