@@ -18,7 +18,7 @@ const AuthLayout: Component<AuthLayoutProps> = ({ children }) => {
 				max-sm:justify-start
 			'
 		>
-			<div className='bg-white rounded-md p-8 shadow-md max-w-md w-full'>
+			<div className='bg-white rounded-md p-12 shadow-md max-w-[32rem] w-full'>
 				{children}
 			</div>
 		</div>
