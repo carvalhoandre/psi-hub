@@ -1,8 +1,8 @@
 'use server';
 
-import { LoginResponse } from './types';
+import { ActionsResponse } from 'types/actions';
 
-const Login = async (_: any, formData: FormData): Promise<LoginResponse> => {
+const Login = async (_: any, formData: FormData): Promise<ActionsResponse> => {
 	try {
 		const email = formData.get('email') as string | null;
 		const password = formData.get('password') as string | null;

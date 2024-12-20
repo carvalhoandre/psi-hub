@@ -11,7 +11,7 @@ const Button: Component<ButtonProps> = ({
 	...props
 }) => {
 	const buttonClass = classNames(
-		'w-full flex justify-center py-2 px-4 rounded-md shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2',
+		'w-full max-w-[8rem] flex justify-center py-2 px-4 rounded-md shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2',
 		{
 			'text-white bg-primary-main hover:bg-primary-dark focus:ring-primary':
 				variant === 'default',

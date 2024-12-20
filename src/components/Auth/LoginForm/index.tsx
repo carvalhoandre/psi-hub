@@ -14,10 +14,12 @@ const LoginForm: Component = () => {
 	});
 
 	return (
-		<form action={action} className='space-y-4 mt-4 mb-4'>
-			<Input id='email' label='Email' type='email' required />
+		<form action={action} className='space-y-4 mt-4 mb-4 flex flex-col gap-2'>
+			<div>
+				<Input id='email' label='Email' type='email' required />
 
-			<Input id='password' label='Senha' type='password' required />
+				<Input id='password' label='Senha' type='password' required />
+			</div>
 
 			<ErrorMessage error={state.error} />
 

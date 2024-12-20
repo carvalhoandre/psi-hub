@@ -1,6 +1,6 @@
 /* TODO: Refatorar com a cionfig do axios */
 
-export type LoginResponse = {
+export type ActionsResponse = {
 	ok: boolean;
 	data: any | null;
 	error?: string;

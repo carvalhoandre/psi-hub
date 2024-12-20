@@ -7,7 +7,7 @@ import LoginForm from 'components/Auth/LoginForm';
 
 const LoginPage: Component = () => {
 	return (
-		<div className='bg-white p-8 rounded shadow-md w-full max-w-sm'>
+		<div className='w-full flex flex-col gap-2'>
 			<Title text='Login' />
 
 			<LoginForm />
