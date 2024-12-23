@@ -17,7 +17,7 @@ const InputPassword: React.FC<React.HTMLProps<HTMLInputElement>> = (props) => {
 
 	return (
 		<div className='mb-4 relative'>
-			<InputBase {...props} />
+			<InputBase type={showPassword ? 'password' : 'text'} {...props} />
 
 			<button
 				type='button'
