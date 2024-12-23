@@ -1,5 +1,6 @@
 'use server';
 
+import { postLogin } from 'core/services/auth';
 import { LoginResponse } from './types';
 
 const Login = async (_: any, formData: FormData): Promise<LoginResponse> => {
@@ -23,11 +24,13 @@ const Login = async (_: any, formData: FormData): Promise<LoginResponse> => {
 			};
 		}
 
-		// TODO: Implementar chamada à API após configurar Axios
+		const { data, success, message } = await postLogin({ email, password });
+
+		console.log('------>', data, success, message);
 		return {
-			ok: true,
-			error: '',
-			data: { email },
+			ok: success,
+			error: message,
+			data,
 		};
 	} catch (error: unknown) {
 		const errorMessage =
