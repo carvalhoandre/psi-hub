@@ -2,15 +2,16 @@ import React from 'react';
 
 import { InputProps } from './types';
 
-import InputBase from './Base';
+import { Field } from './Base';
 import InputPassword from './Password';
+import Token from './Token';
 
-const Input: Component<InputProps> = ({ type = 'text', ...props }) => {
-	if (type === 'password') {
-		return <InputPassword {...props} />;
-	}
+const Input: Component<InputProps> = (props) => {
+	if (props.type === 'token') return <Token {...props} />;
 
-	return <InputBase {...props} type={type} />;
+	if (props.type === 'password') return <InputPassword {...props} />;
+
+	return <Field {...props} />;
 };
 
 export default Input;

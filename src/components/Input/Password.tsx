@@ -6,7 +6,7 @@ import EyeIcon from '../../../public/images/icons/eye.svg';
 import EyeSlashIcon from '../../../public/images/icons/eye-slash.svg';
 
 import OptimizedImage from 'components/OptimizedImage';
-import InputBase from 'components/Input/Base';
+import { InputBase } from './Base';
 
 const InputPassword: React.FC<React.HTMLProps<HTMLInputElement>> = (props) => {
 	const [showPassword, setShowPassword] = React.useState(false);
@@ -17,7 +17,7 @@ const InputPassword: React.FC<React.HTMLProps<HTMLInputElement>> = (props) => {
 
 	return (
 		<div className='mb-4 relative'>
-			<InputBase {...props} />
+			<InputBase {...props} type={showPassword ? 'text' : 'password'} />
 
 			<button
 				type='button'
