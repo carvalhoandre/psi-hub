@@ -74,7 +74,7 @@ const Contact: Component = () => {
 					</p>
 
 					<div className='mt-4 flex gap-10 max-sm:mt-0 max-sm:flex max-sm:justify-center'>
-						<SocialsIcons />
+						{/* <SocialsIcons /> */}
 					</div>
 				</div>
 
