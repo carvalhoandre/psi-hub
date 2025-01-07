@@ -3,9 +3,9 @@ import API from '../api';
 
 import * as Types from 'types/services/auth';
 
-export const postLogin = async (payload: Types.ILoginPayload) => {
+export const postLogin = async (payload: Types.LoginPayload) => {
 	return (await API.post(
 		'/login',
 		payload
-	)) as IResponseData<Types.ILoginResponse>;
+	)) as IResponseData<Types.LoginResponse>;
 };

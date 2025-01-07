@@ -8,8 +8,6 @@ const API = axios.create({
 	baseURL: process.env.NEXT_API_URL,
 });
 
-console.log('API Base URL:', process.env.NEXT_PUBLIC_API_URL);
-
 const getToken = (): string | null => localStorage.getItem('token');
 
 const parseRequest = (

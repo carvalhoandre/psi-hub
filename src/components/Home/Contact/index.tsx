@@ -2,8 +2,7 @@ import React from 'react';
 import SocialImage from '../../../../public/images/IMG_1134-rede-social.webp';
 
 import Title from 'components/Title';
-import OptimizedImage from 'components/OptimizedImage';
-import { SocialsIcons } from 'components/SocialsIcons';
+import { SocialsIcons, OptimizedImage } from 'components';
 
 const Contact: Component = () => {
 	return (

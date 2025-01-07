@@ -26,7 +26,6 @@ const Login = async (_: any, formData: FormData): Promise<LoginResponse> => {
 
 		const { data, success, message } = await postLogin({ email, password });
 
-		console.log('------>', data, success, message);
 		return {
 			ok: success,
 			error: message,

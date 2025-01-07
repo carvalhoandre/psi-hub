@@ -1,19 +1,19 @@
-export interface ILoginPayload {
+export type LoginPayload = {
 	email: string;
 	password: string;
-}
+};
 
-export interface IAuthUser {
+export type AuthUser = {
 	confirmation_code: boolean;
 	cpf: string;
 	email: string;
 	id: number;
 	name: string;
 	role: string;
-}
+};
 
-export interface ILoginResponse {
+export type LoginResponse = {
 	access_token: string;
 	refresh_token: string;
 	user: IAuthUser;
-}
+};
