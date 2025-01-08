@@ -1,30 +1,25 @@
 'use server';
 
-import { postLogin } from 'core/services/auth';
 import { LoginResponse } from './types';
+
+import { postLogin } from 'core/services/auth';
+import { validateRequiredField } from 'core/helpers/actionsValidations/login';
 
 const Login = async (_: any, formData: FormData): Promise<LoginResponse> => {
 	try {
 		const email = formData.get('email') as string | null;
 		const password = formData.get('password') as string | null;
 
-		if (!email || email.trim().length === 0) {
-			return {
-				ok: false,
-				error: 'Por favor, preencha o campo de email.',
-				data: null,
-			};
-		}
+		const emailErrorResponse = validateRequiredField(email, 'email');
+		if (emailErrorResponse) return emailErrorResponse;
 
-		if (!password || password.trim().length === 0) {
-			return {
-				ok: false,
-				error: 'Por favor, preencha o campo de senha.',
-				data: null,
-			};
-		}
+		const passwordErrorResponse = validateRequiredField(password, 'senha');
+		if (passwordErrorResponse) return passwordErrorResponse;
 
-		const { data, success, message } = await postLogin({ email, password });
+		const { data, success, message } = await postLogin({
+			email: email!,
+			password: password!,
+		});
 
 		return {
 			ok: success,
