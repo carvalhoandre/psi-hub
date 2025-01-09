@@ -1,9 +1,7 @@
 import React from 'react';
 import SocialImage from '../../../../public/images/IMG_1134-rede-social.webp';
 
-import Title from 'components/Title';
-import OptimizedImage from 'components/OptimizedImage';
-import { SocialsIcons } from 'components/SocialsIcons';
+import { SocialsIcons, OptimizedImage, Title } from 'components';
 
 const Contact: Component = () => {
 	return (
@@ -74,7 +72,7 @@ const Contact: Component = () => {
 					</p>
 
 					<div className='mt-4 flex gap-10 max-sm:mt-0 max-sm:flex max-sm:justify-center'>
-						{/* <SocialsIcons /> */}
+						<SocialsIcons />
 					</div>
 				</div>
 
