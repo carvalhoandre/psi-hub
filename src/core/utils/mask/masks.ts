@@ -198,6 +198,18 @@ export const maskOnlyNumbers = (value: string = '') => {
  */
 export const noMask = (value: string = '') => value;
 
+/**
+ * Objeto que contém todas as funções de máscara.
+ * @type {Object}
+ * @property {Function} cpf - Função para mascarar CPF.
+ * @property {Function} cnpj - Função para mascarar CNPJ.
+ * @property {Function} cpfcnpj - Função para mascarar CPF ou CNPJ.
+ * @property {Function} date - Função para mascarar data.
+ * @property {Function} currency - Função para mascarar moeda.
+ * @property {Function} phone - Função para mascarar telefone.
+ * @property {Function} zipcode - Função para mascarar CEP.
+ * @property {Function} none - Função que não aplica máscara.
+ */
 export const MASKS = {
 	cpf: maskCpf,
 	cnpj: maskCnpj,
