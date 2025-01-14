@@ -4,9 +4,11 @@ import React from 'react';
 
 import classNames from 'classnames';
 
-import Icon from 'components/Icon';
-
 import * as Types from './types';
+
+import Icon from '../Icon';
+import Tooltip from '../Tooltip';
+import Show from '../Show';
 
 const IconCircle: Component<Types.IconCircleProps> = ({
 	isEmpty,
@@ -45,10 +47,21 @@ const ValidationList: Component<Types.ValidationsListProps> = ({
 				const isInvalid = validation(value);
 
 				return (
-					<li data-testid={id} key={id} className='flex'>
+					<li data-testid={id} key={id} className='flex items-center'>
 						<IconCircle isEmpty={isEmpty} isInvlaid={isInvalid} />
 
 						{message}
+
+						<Show isShowing={Boolean(example)}>
+							<Tooltip.Root
+								isVisibleTooltip={isVisibleTooltip}
+								setIsVisibleTooltip={setIsVisibleTooltip}
+							>
+								<Tooltip.TooltipContent className='whitespace-nowrap'>
+									{example}
+								</Tooltip.TooltipContent>
+							</Tooltip.Root>
+						</Show>
 					</li>
 				);
 			})}
