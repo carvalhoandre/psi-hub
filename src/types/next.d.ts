@@ -12,6 +12,12 @@ declare global {
 
 	type PasswordResetSearchParams = { key: string; login: string };
 
+	export type ActionResponse<T> = {
+		ok: boolean;
+		data: T | null;
+		error?: string;
+	};
+
 	export type PageProps = {
 		Home: NextPage;
 		Login: NextPage;

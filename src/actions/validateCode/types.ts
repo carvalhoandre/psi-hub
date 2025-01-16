@@ -1,5 +1,1 @@
-export type ValidateCodeResponse = {
-	ok: boolean;
-	data: any | null;
-	error?: string;
-};
+export type ValidateCodeResponse = ActionResponse<any>;
