@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
 import classNames from 'classnames';
 
-import * as Types from './types';
-
-export const Container: Component<Types.ContainerProps> = ({
+export const Container: Component<HTMLProps<HTMLDivElement>> = ({
 	testId = 'input-container',
 	children,
 	className,
@@ -19,7 +17,7 @@ export const Container: Component<Types.ContainerProps> = ({
 	);
 };
 
-export const Label: Component<Types.LabelProps> = ({
+export const Label: Component<HTMLProps<HTMLLabelElement>> = ({
 	testId = 'input-label',
 	label,
 	className,
@@ -37,7 +35,7 @@ export const Label: Component<Types.LabelProps> = ({
 	);
 };
 
-export const Field: Component<Types.FieldProps> = ({
+export const Field: Component<HTMLProps<HTMLInputElement>> = ({
 	testId = 'input-field',
 	className,
 	id,
@@ -59,19 +57,5 @@ export const Field: Component<Types.FieldProps> = ({
 			name={id}
 			{...props}
 		/>
-	);
-};
-
-export const InputBase: Component<Types.InputBaseProps> = ({
-	testId = 'input-base',
-	label,
-	...props
-}) => {
-	return (
-		<Container testId={`${testId}-container`}>
-			<Label testId={`${testId}-label`} label={label} />
-
-			<Field testId={`${testId}-field`} {...props} />
-		</Container>
 	);
 };

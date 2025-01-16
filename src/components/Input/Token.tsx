@@ -8,7 +8,7 @@ import { maskOnlyNumbers } from 'core/utils/mask';
 
 import * as Types from './types';
 
-import { Field, Container, Label } from './Base';
+import { Field, Container, Label } from './components';
 
 const Token: Component<Types.InputTokenProps> = ({
 	testId = 'input-token',
