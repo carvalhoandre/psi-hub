@@ -52,6 +52,9 @@ export default {
 				'inset-white-small': 'inset 0 -60px #fff',
 				'outset-white': 'inset 0 80px #fff, inset 0 -80px #fff',
 			},
+			dropShadow: {
+				'3xl': '0px 5px 10px rgba(0, 0, 0, 0.1)',
+			},
 		},
 		boxShadow: {},
 	},
