@@ -14,7 +14,7 @@ const LoginPage: Component = () => {
 
 			<div className='flex flex-col gap-4 mt-4'>
 				<Link
-					href='/forgot-password'
+					href='/auth/resetarSenha'
 					className='text-sm text-primary-main hover:underline'
 				>
 					Esqueci minha senha

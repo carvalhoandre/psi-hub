@@ -3,37 +3,42 @@ import axios, {
 	AxiosError,
 	InternalAxiosRequestConfig,
 } from 'axios';
+import { IResponseData } from 'types/services';
 
 const API = axios.create({
 	baseURL: process.env.NEXT_API_URL,
+	headers: { 'Content-Type': 'application/json' },
 });
-
-const getToken = (): string | null => localStorage.getItem('token');
 
 const parseRequest = (
 	config: InternalAxiosRequestConfig
 ): InternalAxiosRequestConfig => {
-	const token = getToken();
-	if (token && config.headers) {
-		config.headers.Authorization = token;
-	}
+	// Adicione lógica de token aqui se necessário
 	return config;
 };
 
-const parseResponse = (response: AxiosResponse): AxiosResponse => {
+const transformResponse = <Data>(
+	response: AxiosResponse
+): IResponseData<Data> => {
 	const { mocked, ...data } = response.data;
 
 	return {
-		...response,
-		data: {
-			success: true,
-			...(Array.isArray(data) ? { data } : data),
-		},
+		success: true,
+		message: data.message || 'Operação realizada com sucesso',
+		data: data.data as Data,
+		code: data.code || 200,
+		firstValidation: data.validations?.[0] || data.validation?.[0] || null,
 	};
+};
+
+const parseResponse = (response: AxiosResponse): AxiosResponse => {
+	response.data = transformResponse(response);
+	return response;
 };
 
 const parseResponseError = (error: AxiosError): Promise<AxiosResponse> => {
 	const response = error.response;
+
 	const data = response?.data as {
 		message?: string;
 		data?: any;

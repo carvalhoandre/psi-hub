@@ -23,6 +23,7 @@ declare global {
 		Login: NextPage;
 		ConfirmAccount: NextPage;
 		PasswordReset: NextPage<{}, PasswordResetSearchParams>;
+		Cms: NextPage;
 	};
 
 	export type PagesName = keyof PageProps;
