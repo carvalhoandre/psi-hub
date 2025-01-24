@@ -11,7 +11,18 @@ export const postLogin = async (
 
 		return data;
 	} catch (error) {
-		console.error('postLogin Error:', error);
+		throw error;
+	}
+};
+
+export const postRecoveryPassword = async (
+	email: string
+): Promise<IResponseData<Types.LoginResponse>> => {
+	try {
+		const { data } = await API.post('user/forgot-password', { email });
+
+		return data;
+	} catch (error) {
 		throw error;
 	}
 };

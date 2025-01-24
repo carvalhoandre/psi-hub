@@ -37,7 +37,7 @@ const RecoverPassword: Component<Types.RecoverPasswordProps> = ({
 			</p>
 
 			<div className='gap-2 flex-1'>
-				<Input label='E-mail' />
+				<Input id='email' label='E-mail' />
 
 				<ErrorMessage error={state.error} />
 			</div>
