@@ -17,8 +17,6 @@ const RecoverPassword = async ({
 			token,
 		});
 
-		console.log('DATA', data, message, success);
-
 		if (!success) {
 			return {
 				ok: false,
