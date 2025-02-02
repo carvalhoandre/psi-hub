@@ -1,15 +1,16 @@
 import React from 'react';
 
 import Title from 'components/Title';
-import SectionGroup from 'components/Cms/SectionGroup';
-import Divider from 'components/Divider';
+import CmsBody from 'components/Cms/CmsBody';
 
 const Cms: Page<'Cms'> = async () => {
 	return (
 		<>
 			<Title text='CMS' />
 
-			<SectionGroup
+			<CmsBody />
+
+			{/* <SectionGroup
 				title='Introdução'
 				id='introduction'
 				fieldList={[
@@ -55,7 +56,7 @@ const Cms: Page<'Cms'> = async () => {
 				title='Rodapé'
 				id='footer'
 				fieldList={[{ type: 'text', label: 'Título', id: 'title' }]}
-			/>
+			/> */}
 		</>
 	);
 };

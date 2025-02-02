@@ -1,6 +1,4 @@
-import { InputProps } from '../../Input/types';
+import { InputProps } from 'components/Input/types';
+import { ContentField } from 'types/store/CMSSchemaStore';
 
-export type CmsFieldProps = Omit<InputProps, 'type'> & {
-	id: string | number;
-	type: 'text' | 'image';
-};
+export type CmsFieldProps = Omit<InputProps, 'type'> & ContentField;

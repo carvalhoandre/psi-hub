@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import { fontPlayfair, fontPoppins, fontRoboto } from 'core/assets/font';
 
 import Header from 'components/Header';
+import Boot from 'components/Boot';
 import Footer from 'components/Footer';
 
 import './globals.css';
@@ -28,6 +29,8 @@ export default function RootLayout({
 	return (
 		<html lang='pt-BR' className={rootClassNames}>
 			<body className='page'>
+				<Boot />
+
 				<Header />
 
 				{children}

@@ -1,8 +1,8 @@
-import { CmsFieldProps } from '../CmsField/types';
+import { ContentField } from 'types/store/CMSSchemaStore';
 
 export type SectionGroupProps = {
 	title: string;
 	id: string;
 
-	fieldList: CmsFieldProps[];
+	fieldList: ContentField[];
 };
