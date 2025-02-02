@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 
 import Login from 'actions/login';
 
@@ -15,25 +14,27 @@ const LoginForm: Component = () => {
 	});
 
 	React.useEffect(() => {
-		if (state.ok) window.location.href = '/cms';
+		if (!state.ok || !state.data) return;
+
+		const redirectPath = state.data?.active ? '/cms' : '/auth/confirmarConta';
+
+		window.location.href = redirectPath;
 	}, [state.ok]);
 
 	return (
-		<>
-			<form action={action} className='space-y-4 mt-4 mb-4'>
-				<Input id='email' label='Email' type='email' required />
+		<form action={action} className='space-y-4 mt-4 mb-4'>
+			<Input id='email' label='Email' type='email' required />
 
-				<Input id='password' label='Senha' type='password' required />
+			<Input id='password' label='Senha' type='password' required />
 
-				<ErrorMessage error={state.error} />
+			<ErrorMessage error={state.error} />
 
-				<Button
-					type='submit'
-					disabled={isPending}
-					label={isPending ? 'Enviando...' : 'Entrar'}
-				/>
-			</form>
-		</>
+			<Button
+				type='submit'
+				disabled={isPending}
+				label={isPending ? 'Enviando...' : 'Entrar'}
+			/>
+		</form>
 	);
 };
 
