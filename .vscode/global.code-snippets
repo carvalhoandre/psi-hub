@@ -65,7 +65,7 @@
       "mis"
     ],
     "body": [
-      "import * as Styles from './styles.ts';"
+      "import * as Styles from './styles';"
     ],
     "description": "Import styles."
   },
@@ -75,7 +75,7 @@
       "mipt"
     ],
     "body": [
-      "import * as Types from './types.ts';"
+      "import * as Types from './types';"
     ],
     "description": "Import props type."
   }
